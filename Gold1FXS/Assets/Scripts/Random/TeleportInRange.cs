@@ -14,7 +14,7 @@ public class TeleportInRange : MonoBehaviour {
     void Update() {
         if ((Input.GetKeyDown(KeyCode.E) || automaticTeleport) && inRange) {
             source.transform.position = target.transform.position;
-            
+
         }
     }
 
