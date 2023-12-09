@@ -2,7 +2,6 @@ Shader "Custom/ToonShaderCG" {
     Properties {
         // Main object color
         [HDR] _Albedo("Albedo", Color) = (1,1,1,1)
-
         // Define amount of gradients
         _Shades("Shades", Range(1, 20)) = 3
 
@@ -10,6 +9,7 @@ Shader "Custom/ToonShaderCG" {
         _OutlineSize("Outline Thickness", Range(2, 100)) = 20
         [HDR] _OutlineColor("Outline Color", Color) = (0,0,0,1)
     }
+    
     SubShader {
         Tags { "RenderType"="Opaque" "RenderPipeline" = "UniversalPipeline"}
         LOD 100
@@ -101,7 +101,7 @@ Shader "Custom/ToonShaderCG" {
                 // Add gradient
                 cosineAngle = floor(cosineAngle * _Shades) / _Shades;
 
-                // Apply gradient to the color
+                // Apply gradient to the color and return
                 return _Albedo * cosineAngle;
             }
             ENDCG
