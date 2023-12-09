@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaveMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 031780ff12da23a4b9b711595ee60735,
+  m_Name: IAmNotCreativeEnoughForThisMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 429be00d102003b4c851ea16db4ed5ac,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -24,10 +24,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BaseTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,15 +38,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 0.21
-    - _Frequency: 10.42
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 1
-    m_Colors:
-    - _BaseColor: {r: 0, g: 0.59882784, b: 1, a: 0}
+    m_Colors: []
   m_BuildTextureStacks: []
---- !u!114 &13313485142752645
+--- !u!114 &3655757635117108512
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
