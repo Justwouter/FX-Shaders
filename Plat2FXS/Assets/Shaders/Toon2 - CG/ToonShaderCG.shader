@@ -18,7 +18,7 @@ Shader "Custom/ToonShaderCG" {
         // Outline - renders a bigger version of the object w/ the front culled
         Pass {
             Name "Outline Pass"
-            Tags { "LightMode" = "UniversalForward" } // Hacky workaround for URP not supporting multiple passes apperantly?
+            Tags { "LightMode" = "UniversalForward" } // Workaround for URP not running multiple passes apperantly?
             Cull Front
             
             CGPROGRAM
@@ -60,7 +60,7 @@ Shader "Custom/ToonShaderCG" {
         // Cell shading
         Pass {
             Name "Shading pass"
-            Tags { "LightMode" = "SRPDefaultUnlit" } // Hacky workaround for URP not supporting multiple passes apperantly?
+            Tags { "LightMode" = "SRPDefaultUnlit" } // Workaround for URP not running multiple passes apperantly?
 
             CGPROGRAM
             #pragma vertex vert
