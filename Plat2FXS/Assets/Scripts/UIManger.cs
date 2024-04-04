@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 using Unity.Mathematics;
 
@@ -7,11 +8,14 @@ using UnityEngine;
 
 public class UIManger : MonoBehaviour {
     [SerializeField] private Light mainLight;
-    
-    [SerializeField, Range(0,1)] private float speed;
+
+    [SerializeField, Range(0, 1)] private float speed;
+    [SerializeField] private GameObject[] walls;
     private bool pointerDown;
     private float distance;
     private float timer;
+    private bool wallsEnabled = true;
+
 
     private void Update() {
         // if(Input.GetKeyDown(KeyCode.D)){
@@ -35,5 +39,10 @@ public class UIManger : MonoBehaviour {
     public void PointerUp() {
         distance = 0.0f;
         pointerDown = false;
+    }
+
+    public void ToggleWalls() {
+        wallsEnabled = !wallsEnabled;
+        walls.ToList().ForEach(w => w.SetActive(wallsEnabled));
     }
 }
